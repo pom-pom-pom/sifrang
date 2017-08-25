@@ -25,6 +25,8 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="/assets/css/demo.css" rel="stylesheet" />
 
+    <link href="/css/style_form.css" rel="stylesheet" />
+
 
     <!--  Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -194,6 +196,9 @@
 </body>
 
     <!--   Core JS Files   -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
     <script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 
@@ -214,6 +219,8 @@
 
     <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="/assets/js/demo.js"></script>
+
+    <script src="/js/sliding.form.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

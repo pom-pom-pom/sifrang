@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class AdminController extends Controller
 {
     /**
@@ -15,6 +16,11 @@ class AdminController extends Controller
     {
         $this->middleware('auth:admin');
     }
+    public function addCountries(){
+
+
+
+    }
     public function index()
     {
          return view('admin.dashboard');
@@ -24,6 +30,11 @@ class AdminController extends Controller
     public function createAddress()
     {
         return view('admin.createAddress');
+    }
+
+    public function addState()
+    {
+        return view('admin.addState');
     }
 
     /**
