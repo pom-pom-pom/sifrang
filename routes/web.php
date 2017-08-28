@@ -31,6 +31,7 @@ Auth::routes();
 
 Route::post('/user/logout','UserController@userLogout')->name('user.logout');
 Route::get('/user/profile','UserController@profile')->name('user.profile');
+Route::post('/user/profile','UserController@store')->name('user.profile');
 Route::get('/user','UserController@index')->name('user.dashboard');
 
 Route::get('/admin/login','Auth\AdminLoginController@index')->name('admin.login');
@@ -38,6 +39,7 @@ Route::post('/admin/login','Auth\AdminLoginController@login')->name('admin.login
 Route::post('/admin/logout','Auth\AdminLoginController@logout')->name('admin.logout');
 
 Route::get('/admin/createAddress','AdminController@createAddress')->name('admin.createAddress');
+Route::post('/admin/createAddress','AdminController@store')->name('admin.createAddress');
 Route::get('/admin','AdminController@index')->name('admin.dashboard');
 
 Route::get('/awareness','AwarenessController@index')->name('awareness');
