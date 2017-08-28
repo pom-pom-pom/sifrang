@@ -39,7 +39,7 @@ Route::post('/admin/login','Auth\AdminLoginController@login')->name('admin.login
 Route::post('/admin/logout','Auth\AdminLoginController@logout')->name('admin.logout');
 
 Route::get('/admin/createAddress','AdminController@createAddress')->name('admin.createAddress');
-Route::post('/admin/createAddress','AdminController@store')->name('admin.createAddress');
+Route::post('/admin/createAddress','CreateAddressController@store')->name('admin.createAddress');
 Route::get('/admin','AdminController@index')->name('admin.dashboard');
 
 Route::get('/awareness','AwarenessController@index')->name('awareness');

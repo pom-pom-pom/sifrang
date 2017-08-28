@@ -45,7 +45,10 @@ class CreateAddressController extends Controller
      */
     public function store(Request $request)
     {
-        if($request['country'])
+
+
+          return $request['country'];
+/*        if($request['country'])
         {
             $addresses=$request['country'];
             foreach($addresses as $address){
@@ -53,10 +56,13 @@ class CreateAddressController extends Controller
                             $newAddress=new AddressCountry;                     
                             $newAddress->country=$address['0'];
                             $newAddress->save();  
+                            return 'ok';
                         }
                         catch(\Exception $e){
-                            
+                            return "sdfsdf";
                         }
+
+
         }
         
         if($request['state'])
@@ -244,7 +250,12 @@ class CreateAddressController extends Controller
                             
                         }
         }
-    }
+*/ 
+
+
+
+
+   }
 
     /**
      * Display the specified resource.
