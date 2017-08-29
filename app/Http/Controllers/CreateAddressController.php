@@ -47,8 +47,8 @@ class CreateAddressController extends Controller
     {
 
 
-          return $request['country'];
-/*        if($request['country'])
+          
+        if($request['country'])
         {
             $addresses=$request['country'];
             foreach($addresses as $address){
@@ -56,15 +56,15 @@ class CreateAddressController extends Controller
                             $newAddress=new AddressCountry;                     
                             $newAddress->country=$address['0'];
                             $newAddress->save();  
-                            return 'ok';
+                            
                         }
                         catch(\Exception $e){
-                            return "sdfsdf";
+                            
                         }
 
 
+            }
         }
-        
         if($request['state'])
         {
             $addresses=$request['state'];
@@ -78,6 +78,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['district'])
         {
@@ -93,6 +94,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['subDivision'])
         {
@@ -109,6 +111,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['circleOffice'])
         {
@@ -126,6 +129,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['policeStation'])
         {
@@ -144,6 +148,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['postOffice'])
         {
@@ -163,6 +168,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['block'])
         {
@@ -183,6 +189,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['gpORtown'])
         {
@@ -204,6 +211,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['wardNo'])
         {
@@ -226,6 +234,7 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
         if($request['village'])
         {
@@ -249,13 +258,11 @@ class CreateAddressController extends Controller
                         catch(\Exception $e){
                             
                         }
+            }
         }
-*/ 
+ 
 
-
-
-
-   }
+    }
 
     /**
      * Display the specified resource.
