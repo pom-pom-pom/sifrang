@@ -66,7 +66,8 @@
                             <h1 class="col-md-offset-3">Enter Details</h1>
                             <div id="wrapper">
                                 <div id="steps">
-                                    <form id="formElem" name="formElem" action="" method="post">
+                                    <form id="formElem" name="formElem" action="{{ route('admin.createAddress') }}" method="post">
+                                        {!! csrf_field() !!}
                                         <fieldset class="step">
                                             <legend>Countries</legend>
                                             <p>
@@ -77,6 +78,7 @@
                                             <p id="countries">
                                                 <label>Enter Countries</label><br>
                                             </p>
+                                        }
                 <!--                             <p>
                                                 <label for="email">Email</label>
                                                 <input id="email" name="email" placeholder="info@tympanus.net" type="email" AUTOCOMPLETE=OFF />
@@ -260,6 +262,38 @@
 
             $('#formElem').on('click','.remCF',function(){
                 $(this).parent().remove();
+            });
+
+            $('#enter_state').click(function(){
+
+                var arr=[];
+                $(".count_input").each(function(i){
+
+                    arr.push($(this).val());
+
+                });
+
+            $.ajax({
+                      type: 'POST',
+                      async: false,
+                      url: "{{ route('admin.createAddress') }}",
+                      data:{  'country': arr,
+                                '_token': $('input[name="_token"]').val()
+
+                        },
+                      success: function(data){
+
+                        alert(data);
+                       
+                    },
+                    error: function(data){
+
+                            alert('not ok');
+
+                        }
+                              
+                        
+                    });
             });
         </script>
 @endsection
